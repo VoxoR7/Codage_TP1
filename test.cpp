@@ -13,7 +13,7 @@ int main( int argc, char *argv[] ) {
 
     Hadamar h2(h);
 
-    h2.afficherMatrice();
+    /*h2.afficherMatrice();*/
 
     int8_t *pt = h.ligneHadamar( 1);
 

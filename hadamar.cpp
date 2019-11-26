@@ -127,7 +127,10 @@ void Hadamar::afficherMatrice() {
 
         for ( uint8_t j = 0 ; j < nbUtilisateursMax ; j++ ) {
 
-            printf("%2" PRId8"", *((*(tab + i)) + j));
+            if ( *((*(tab + i)) + j) == 1)
+                printf("\033[32m 1\033[00m");
+            else
+                printf("\033[31m-1\033[00m");
         }
         printf("\n");
     }

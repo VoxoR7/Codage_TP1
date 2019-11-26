@@ -21,8 +21,8 @@ Hadamar::Hadamar( uint8_t nbUtilisateurs) {
         tab = new int8_t *[1];
         (*tab) = new int8_t[1];
 
-        **tab = 1;
-        nbUtilisateursMax = H0;
+        **tab = H0;
+        nbUtilisateursMax = 1;
         return;
     }
 
@@ -97,6 +97,12 @@ Hadamar::Hadamar( uint8_t nbUtilisateurs) {
             for ( uint8_t j = 0 ; j < taillePre ; j++ )
                 *((*(tab + i + taillePre)) + j + taillePre) = -(tabPre[i][j]);
     }
+}
+
+Hadamar::Hadamar(const Hadamar &h) {
+
+    tab = h.tab;
+    nbUtilisateursMax = h.nbUtilisateursMax;
 }
 
 uint8_t Hadamar::getnbUtilisateursMax() {

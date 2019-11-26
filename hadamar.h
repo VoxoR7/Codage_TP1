@@ -13,7 +13,7 @@ class Hadamar {
 
         /*Hadamar();*/
         Hadamar( uint8_t nbUtilisateurs);
-        /*Hadamar( const Hadamar &);*/
+        Hadamar( const Hadamar &h );
         
         /* méthode */
 
